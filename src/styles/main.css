@@ -1,0 +1,410 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #fefded;
+  font-family: "Figtree", sans-serif;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+header {
+  width: 100%;
+  background-color: #C6EBC5;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+.app-name {
+  display: flex;
+  align-items: center;
+}
+
+.app-name img {
+  margin-right: 10px;
+}
+
+.app-name h1 {
+  margin: 0;
+  font-size: 24px;
+  margin-right: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  color: black;
+}
+
+/* skip-link */
+.skip-link {
+  position: absolute;
+  top: -60px; 
+  background-color: #1A4D2E;
+  color: white;
+  padding: 8px;
+  z-index: 100;
+  text-decoration: none; 
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/*navigation*/
+.navigation {
+  position: fixed;
+  top: 0;
+  left: -200px; 
+  width: 200px;
+  height: 100%;
+  background-color: #C6EBC5;
+  transition: left 0.3s ease-in-out; 
+  z-index: 1000;
+}
+
+.navigation.open {
+  left: 0; 
+}
+
+.navigation ul {
+  list-style: none;
+  display: flex;
+}
+
+.navigation li {
+  margin-top: 0;
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+
+.navigation a {
+  display: inline-block;
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s ease-in-out;
+  min-width: 44px;
+  min-height: 44px;
+}
+
+.navigation a:hover {
+  background-color: #f9f9f9;
+}
+
+/*hamburger*/
+#hamburger {
+  display: block;
+  top: 20px;
+  left: 20px;
+  font-size: 25px;
+  cursor: pointer;
+  min-width: 44px;
+  min-height: 44px;
+}
+
+.hamburger:focus {
+  outline: 0;
+}
+
+/*hero*/
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  aspect-ratio: 16 / 9;
+}
+
+.hero-title {
+  font-size: 2em;
+  margin: 0.5em 0;
+}
+
+.hero-description {
+  font-size: 1.2em;
+  margin: 0.5em 0;
+  margin-bottom: 20px;
+}
+
+/* Restaurant detail styles */
+.restaurant__title {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.restaurant__poster {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.restaurant__info h3 {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.restaurant__info h4 {
+  font-size: 1.2em;
+  margin-bottom: 5px;
+  color: #777;
+}
+
+.restaurant__info p {
+  font-size: 1em;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.restaurant__menu {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.restaurant__menu div {
+  width: 45%;
+}
+
+.restaurant__menu h5 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color: #777;
+}
+
+.restaurant__menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.restaurant__menu ul li {
+  font-size: 1em;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+/* Customer reviews styles */
+.restaurant__reviews h3 {
+  font-size: 1.8em;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.review {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+  background-color: #f9f9f9;
+}
+
+.review__name {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.review__date {
+  font-size: 0.9em;
+  margin-bottom: 10px;
+  color: #777;
+}
+
+.review__review {
+  font-size: 1em;
+  color: #555;
+}
+
+.review-form h4 {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.review-form input,
+.review-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1em;
+  min-width: 44px;
+  min-height: 44px;
+}
+
+.review-form button {
+  background-color: #007BFF;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  min-width: 44px;
+  min-height: 44px;
+}
+
+.review-form button:hover {
+  background-color: #0056b3;
+}
+
+/*favorite restaurant*/
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: black;
+}
+
+#query {
+  min-width: 44px;
+  min-height: 44px;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+/*restaurant list */
+.restaurant-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Restaurant item styles */
+.restaurant-item {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.restaurant-item:hover {
+  transform: translateY(-5px);
+}
+
+.restaurant-item__thumbnail {
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  object-fit: cover;
+}
+
+.restaurant-item__content {
+  padding: 15px;
+}
+
+.restaurant-item__title {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.restaurant-item__city,
+.restaurant-item__rating {
+  font-size: 1em;
+  margin-bottom: 5px;
+  color: #777;
+}
+
+.restaurant-item__description {
+  font-size: 0.9em;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.restaurant-item__detail-button {
+  background-color: #007BFF;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  min-width: 44px;
+  min-height: 44px;
+}
+
+.restaurant-item__detail-button:hover {
+  background-color: #0056b3;
+}
+
+/*content */
+.content__heading {
+  text-align: center;
+}
+
+/* Style for the like/unlike button */
+.like,
+.unlike {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Icon inside the button */
+.like i,
+.unlike i {
+  font-size: 24px;
+  transition: color 0.3s ease;
+}
+
+/* Liked state */
+.like {
+  background-color: #ff0000;
+}
+
+.like i {
+  color: #fff;
+}
+
+/* Unliked state */
+.unlike {
+  background-color: #fff;
+}
+
+.unlike i {
+  color: #ff0000;
+}
+
+/* Hover effects */
+.like:hover,
+.unlike:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}

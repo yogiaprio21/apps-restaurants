@@ -1,0 +1,134 @@
+@media screen and (max-width: 1200px) {
+  .hero {
+    max-width: 100%;
+  }
+
+  .hero img {
+    height: auto;
+  }
+
+  .hero-title {
+    font-size: 28px; 
+    top: 25%; 
+  }
+
+  .hero-description {
+    font-size: 20px; 
+    bottom: 15px;
+  }
+
+  .restaurant__poster {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .restaurant__info {
+    padding: 0 20px;
+  }
+}
+
+@media screen and (min-width: 769px) {
+.navigation {
+  position: static; 
+  width: auto; 
+  height: auto; 
+  transition: none; 
+  left: auto; 
+}
+
+.navigation li {
+  margin-top: 20px; 
+  margin-bottom: 0; 
+  margin-right: 20px;
+}
+
+.navigation a {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+  .navigation ul {
+    display: flex;
+  }
+
+  #hamburger {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  header {
+    width: 100%;
+    background-color: #C6EBC5;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
+
+  .app-name h1 {
+    font-size: 20px;
+  }
+
+  .navigation open {
+    left: 0;
+  }
+
+  .navigation ul {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .navigation a {
+    padding: 14px 20px;
+  }
+
+  .hero-title {
+    font-size: 28px;
+  }
+
+  .hero-description {
+    font-size: 18px;
+  }
+
+  #hamburger {
+    display: block;
+    top: 20px;
+    left: 20px;
+    font-size: 25px;
+    cursor: pointer;
+    min-width: 44px;
+    min-height: 44px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .app-name h1 {
+    font-size: 18px;
+  }
+
+  .navigation {
+    width: 180px;
+  }
+
+  .container {
+    margin-left: 35px;
+  }
+
+  .hero-title {
+    font-size: 24px;
+  }
+
+  .hero-description {
+    font-size: 16px;
+  }
+}
